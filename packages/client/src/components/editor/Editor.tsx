@@ -1,4 +1,4 @@
-import { EditorContent, EditorProvider, useCurrentEditor } from '@tiptap/react';
+import { EditorContent, useEditor, EditorContext, useCurrentEditor } from '@tiptap/react';
 import StarterKit from '@tiptap/starter-kit';
 import Underline from '@tiptap/extension-underline';
 import TextAlign from '@tiptap/extension-text-align';
@@ -38,21 +38,26 @@ export default function Editor({ content, editable, onChange }: EditorProps) {
     }
   }
 
+  const editor = useEditor({
+    extensions,
+    content: parsedContent,
+    editable,
+    onUpdate: ({ editor }) => {
+      onChange(JSON.stringify(editor.getJSON()));
+    }
+  });
+
+  if (!editor) {
+    return null;
+  }
+
   return (
-    <EditorProvider
-      extensions={extensions}
-      content={parsedContent}
-      editable={editable}
-      onUpdate={({ editor }) => {
-        const json = editor.getJSON();
-        onChange(JSON.stringify(json));
-      }}
-      slotBefore={editable ? <Toolbar /> : undefined}
-    >
+    <EditorContext.Provider value={{ editor }}>
+      {editable ? <Toolbar /> : null}
       <div className="flex-1 overflow-y-auto bg-[#E8EAED]">
         <EditorCanvas />
       </div>
-    </EditorProvider>
+    </EditorContext.Provider>
   );
 }
 
