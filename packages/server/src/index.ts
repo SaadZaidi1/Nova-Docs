@@ -35,7 +35,7 @@ app.use(errorHandler);
 // Start server
 if (process.env.NODE_ENV !== 'test') {
   app.listen(config.PORT, () => {
-    console.log(`🚀 Ajaia Docs server running on http://localhost:${config.PORT}`);
+    console.log(`🚀 Nova Docs server running on http://localhost:${config.PORT}`);
   });
 }
 

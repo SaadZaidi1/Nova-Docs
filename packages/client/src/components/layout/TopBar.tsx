@@ -89,9 +89,9 @@ export default function TopBar({
           className="flex items-center gap-2 flex-shrink-0 hover:opacity-80 transition-opacity"
         >
           <div className="w-8 h-8 bg-primary-600 rounded-lg flex items-center justify-center">
-            <span className="text-white font-bold text-sm">A</span>
+            <span className="text-white font-bold text-sm">N</span>
           </div>
-          <span className="text-lg font-semibold text-gray-800 hidden sm:inline">Ajaia Docs</span>
+          <span className="text-lg font-semibold text-gray-800 hidden sm:inline">Nova Docs</span>
         </button>
 
         {showDocumentControls && (

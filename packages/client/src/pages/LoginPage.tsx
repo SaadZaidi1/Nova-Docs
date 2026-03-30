@@ -43,9 +43,9 @@ export default function LoginPage() {
         {/* Logo */}
         <div className="text-center mb-8">
           <div className="w-16 h-16 bg-primary-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
-            <span className="text-white font-bold text-2xl">A</span>
+            <span className="text-white font-bold text-2xl">N</span>
           </div>
-          <h1 className="text-2xl font-semibold text-gray-900">Sign in to Ajaia Docs</h1>
+          <h1 className="text-2xl font-semibold text-gray-900">Sign in to Nova Docs</h1>
           <p className="text-sm text-gray-500 mt-2">Collaborate on documents in real-time</p>
         </div>
 

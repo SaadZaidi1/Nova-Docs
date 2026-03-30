@@ -1,4 +1,4 @@
-# Ajaia Docs
+# Nova Docs
 
 A lightweight collaborative document editor inspired by Google Docs, built with React, TypeScript, Tiptap, Express, and Prisma. Supports document creation/editing, file upload, document sharing between users, and full persistence.
 
