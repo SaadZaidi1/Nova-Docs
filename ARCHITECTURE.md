@@ -2,7 +2,7 @@
 
 ## Overview
 
-Ajaia Docs is a monorepo pnpm workspace with two packages:
+Nova Docs is a monorepo pnpm workspace with two packages:
 - **`packages/server`** — Express API with Prisma ORM, JWT auth, and file upload handling
 - **`packages/client`** — React SPA with Tiptap editor, Zustand state management, and Tailwind CSS
 
