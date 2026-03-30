@@ -23,7 +23,7 @@ router.post('/register', async (req: Request, res: Response, next: NextFunction)
     const result = await register(parsed.data);
 
     // Set httpOnly cookie
-    res.cookie('ajaia_token', result.token, {
+    res.cookie('nova_token', result.token, {
       httpOnly: true,
       secure: process.env.NODE_ENV === 'production',
       sameSite: 'lax',
@@ -54,7 +54,7 @@ router.post('/login', async (req: Request, res: Response, next: NextFunction) =>
     const result = await login(parsed.data);
 
     // Set httpOnly cookie
-    res.cookie('ajaia_token', result.token, {
+    res.cookie('nova_token', result.token, {
       httpOnly: true,
       secure: process.env.NODE_ENV === 'production',
       sameSite: 'lax',

@@ -2,7 +2,7 @@ import axios from 'axios';
 import { useAuthStore } from '../store/authStore';
 
 /**
- * Axios instance configured for the Ajaia Docs API.
+ * Axios instance configured for the Nova Docs API.
  * Includes JWT token injection and 401 redirect handling.
  */
 const apiClient = axios.create({

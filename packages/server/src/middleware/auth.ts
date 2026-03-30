@@ -40,8 +40,8 @@ export async function authMiddleware(
     }
 
     // Fallback to httpOnly cookie
-    if (!token && req.cookies?.ajaia_token) {
-      token = req.cookies.ajaia_token;
+    if (!token && req.cookies?.nova_token) {
+      token = req.cookies.nova_token;
     }
 
     if (!token) {
